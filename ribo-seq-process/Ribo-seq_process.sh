@@ -1,4 +1,3 @@
-
 species="humanref"
 doc="/disk/ribo_seq/xxx"
 rna="yes"

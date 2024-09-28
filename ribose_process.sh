@@ -1,5 +1,3 @@
-#!/bin/sh
-### created and update on 02-15-2023 by wang,zeyu as a ribosomal profiling pipeline
 
 species="humanref"
 doc="/disk/ribo_seq/xxx"

@@ -1,8 +1,6 @@
 #!/bin/sh
 ### created and update on 02-15-2023 by wang,zeyu as a ribosomal profiling pipeline
 
-##mapping , likely RNA_seq analysis
-#set the species
 species="humanref"
 doc="/disk/ribo_seq/xxx"
 rna="yes"

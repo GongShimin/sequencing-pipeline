@@ -1,0 +1,5 @@
+/media/hp/disk4/biosoft/STAR-2.7.10a/bin/Linux_x86_64_static/STAR --runThreadN 16 --readFilesIn ${line}_trimmed.fq  --genomeDir /media/hp/disk4/wzy/reference/NC12/index --outFileNamePrefix aligned2/${line} --outSAMtype BAM SortedByCoordinate --alignIntronMin 20 --alignIntronMax 50000 --twopassMode Basic --quantMode GeneCounts --outSAMattributes Standard
+/media/hp/disk4/biosoft/STAR-2.7.10a/bin/Linux_x86_64_static/STAR --runThreadN 16 --readFilesIn ${line}_trimmed.fq  --genomeDir /media/hp/disk4/wzy/reference/hg38/index --outFileNamePrefix aligned2/${line} --outSAMtype BAM SortedByCoordinate --alignIntronMin 20 --alignIntronMax 50000 --twopassMode Basic --quantMode GeneCounts --outSAMattributes Standard
+samtools index 
+multiBamSummary bins --bamfiles *.bam --scalingFactors spikeinscale.txt -o results.npz  #normalize scores
+STAR --runThreadN 16 --readFilesIn /disk/3_r1.sra_1_val_1.fq /disk/3_r1.sra_2_val_2.fq --genomeDir /disk/genomes/$species/index --outFileNamePrefix /disk/aligned2/3_r1.sra --alignIntronMin 20 --alignIntronMax 50000 --twopassMode Basic --quantMode GeneCounts --outSAMattributes Standard

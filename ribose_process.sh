@@ -8,23 +8,9 @@ position="A"
 Genome="/disk/ribo_seq/humanref"
 sort="longest"   #CDS or longest
 sort_file="longest_cDNA"   #or longest_cDNA
-#a = "" #your adapter sequence
-
-
-# go to the fold storage .fq
 cd ${doc}
-#find -name "*mmed.fq.gz" | xargs -P 15 -n 1 pigz -d
-#ls *.fq.gz |sed 's/.fq.gz//'|uniq > deadapter.txt
-mkdir b_align #save the result of mapping , longest_cDNA.fa as reference
+mkdir b_align 
 mkdir de_rRNA
-
-#NNNNAGATCGGAAGAGCACACGTCT
-#find -name "*derRNA.fq.gz" | xargs -P 15 -n 1 pigz -d
-
-#select the reads length range from 29-30
-#python3 seperate_test1.py -i ${doc} -rb 24 -rt 36
-
-#start the mapping
 cat deadapter.txt | while read line
 do
         if [ ${rna} = "yes" ];then
